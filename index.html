@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E3A2F" />
+
+  <!-- SEO -->
+  <title>Shubham & Janhavi · A Wedding Invitation</title>
+  <meta name="description" content="Shubham weds Janhavi — join us in celebrating our wedding on 28 December at Sky Banquet, Kharghar. RSVP, events, gallery & directions." />
+  <meta name="author" content="Shubham & Janhavi" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shubham & Janhavi · A Wedding Invitation" />
+  <meta property="og:description" content="Two hearts, one soul, together forever. Join us on 14 February 2026." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=70" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (inline SVG monogram) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E3A2F'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23C6A15B' text-anchor='middle'%3EA%26I%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Structured data: Wedding Event -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Wedding of Shubham & Janhavi",
+    "startDate": "2026-02-14T18:00:00+05:30",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Sky Banquet",
+      "address": "1st Floor, Niharika Mirage, Kopra Rd, Sector 10, Kharghar, Maharashtra 410210"
+    },
+    "image": ["https://images.unsplash.com/photo-1519741497674-611481863552?w=1200"],
+    "description": "Join us in celebrating the wedding of Shubham & Janhavi."
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.className=document.documentElement.className.replace("no-js","js");</script>
+</head>
+<body>
+  <!-- ============ LOADER ============ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader__ring">
+      <svg viewBox="0 0 100 100" width="90" height="90">
+        <circle class="loader__track" cx="50" cy="50" r="42" />
+        <circle class="loader__spin" cx="50" cy="50" r="42" />
+      </svg>
+      <span class="loader__mono">S&amp;J</span>
+    </div>
+    <p class="loader__text">Setting the table…</p>
+  </div>
+
+  <!-- ============ FLORAL BORDERS (ambient) ============ -->
+  <div class="floral floral--tl" aria-hidden="true"></div>
+  <div class="floral floral--br" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#home" class="nav__brand" aria-label="Shubham and Janhavi home">
+        <span class="nav__monogram">S<span class="amp">&amp;</span>J</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#story" data-i18n="nav_story">Our Story</a>
+        <a href="#events" data-i18n="nav_events">Events</a>
+        <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
+        <a href="#venue" data-i18n="nav_venue">Venue</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="nav__tools">
+        <button class="icon-btn" id="langToggle" aria-label="Switch language" title="English / मराठी">
+          <span id="langLabel">EN</span>
+        </button>
+        <button class="icon-btn" id="musicToggle" aria-label="Play music" title="Music" aria-pressed="false">
+          <svg class="ic-music" viewBox="0 0 24 24" width="18" height="18"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Light / Dark">
+          <svg class="ic-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg>
+          <svg class="ic-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <canvas id="hearts" class="hero__hearts" aria-hidden="true"></canvas>
+
+      <div class="hero__content reveal">
+        <p class="hero__eyebrow" data-i18n="hero_invited">You're Invited</p>
+        <h1 class="hero__names">
+          <span>Shubham</span>
+          <span class="hero__amp">&amp;</span>
+          <span>Janhavi</span>
+        </h1>
+        <p class="hero__date" data-i18n="hero_date">Monday 28 December , Navi Mumbai</p>
+        <p class="hero__quote" data-i18n="hero_quote">"Two hearts, one soul, together forever."</p>
+      </div>
+
+      <a href="#countdown" class="hero__scroll" aria-label="Scroll down">
+        <span class="hero__scroll-dot"></span>
+      </a>
+    </section>
+
+    <!-- ============ COUNTDOWN ============ -->
+    <section class="section countdown" id="countdown">
+      <p class="eyebrow" data-i18n="cd_eyebrow">Counting the days</p>
+      <h2 class="section__title" data-i18n="cd_title">Until we say "I do"</h2>
+      <div class="cd" id="cd">
+        <div class="cd__unit"><span class="cd__num" id="cdDays">00</span><span class="cd__lbl" data-i18n="cd_days">Days</span></div>
+        <div class="cd__unit"><span class="cd__num" id="cdHours">00</span><span class="cd__lbl" data-i18n="cd_hours">Hours</span></div>
+        <div class="cd__unit"><span class="cd__num" id="cdMins">00</span><span class="cd__lbl" data-i18n="cd_mins">Minutes</span></div>
+        <div class="cd__unit"><span class="cd__num" id="cdSecs">00</span><span class="cd__lbl" data-i18n="cd_secs">Seconds</span></div>
+      </div>
+      <p class="cd__done" id="cdDone" hidden data-i18n="cd_done">Today is the day — thank you for celebrating with us! 🎉</p>
+    </section>
+
+    <!-- ============ OUR STORY ============ -->
+    <section class="section story" id="story">
+      <p class="eyebrow" data-i18n="story_eyebrow">Our Story</p>
+      <h2 class="section__title" data-i18n="story_title">How it all began</h2>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="timeline__icon">☕</div>
+          <div class="timeline__card">
+            <h3 data-i18n="story_1_t">How We Met</h3>
+            <span class="timeline__date" data-i18n="story_1_d">Spring 2021</span>
+            <p data-i18n="story_1_p">A spilled coffee, an apology, and a conversation that never really ended. A crowded café in Pune brought two strangers to the same small table.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__icon">🌆</div>
+          <div class="timeline__card">
+            <h3 data-i18n="story_2_t">First Date</h3>
+            <span class="timeline__date" data-i18n="story_2_d">Summer 2021</span>
+            <p data-i18n="story_2_p">A long walk by the river turned into dinner, then dessert, then a promise to do it all again the very next evening.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__icon">💍</div>
+          <div class="timeline__card">
+            <h3 data-i18n="story_3_t">The Proposal</h3>
+            <span class="timeline__date" data-i18n="story_3_d">Winter 2024</span>
+            <p data-i18n="story_3_p">Under a sky full of stars and one very nervous question, she said yes before he could finish asking.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__icon">💐</div>
+          <div class="timeline__card">
+            <h3 data-i18n="story_4_t">Wedding Day</h3>
+            <span class="timeline__date" data-i18n="story_4_d">14 February 2026</span>
+            <p data-i18n="story_4_p">And now, surrounded by everyone we love, we begin the rest of our lives together.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ BRIDE & GROOM ============ -->
+    <section class="section couple" id="couple">
+      <p class="eyebrow" data-i18n="couple_eyebrow">The Couple</p>
+      <h2 class="section__title" data-i18n="couple_title">Meet the pair</h2>
+      <div class="couple__grid">
+        <article class="person reveal">
+          <div class="person__photo" data-photo="groom"></div>
+          <h3 class="person__name">Shubham Panchal</h3>
+          <p class="person__role" data-i18n="couple_groom_role">The Groom</p>
+          <p class="person__bio" data-i18n="couple_groom_bio">An architect who loves old bookshops, filter coffee and long drives. Janhavi says he over-plans everything — including this wedding.</p>
+        </article>
+
+        <div class="couple__heart" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="34" height="34"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z"/></svg>
+        </div>
+
+        <article class="person reveal">
+          <div class="person__photo" data-photo="bride"></div>
+          <h3 class="person__name">Janhavi Omale</h3>
+          <p class="person__role" data-i18n="couple_bride_role">The Bride</p>
+          <p class="person__bio" data-i18n="couple_bride_bio">A doctor who paints on weekends and hums while she works. Shubham says she can win any argument with a single raised eyebrow.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section class="section events" id="events">
+      <p class="eyebrow" data-i18n="events_eyebrow">Celebrations</p>
+      <h2 class="section__title" data-i18n="events_title">Wedding Events</h2>
+      <div class="events__grid" id="eventsGrid"><!-- injected by JS --></div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery">
+      <p class="eyebrow" data-i18n="gallery_eyebrow">Memories</p>
+      <h2 class="section__title" data-i18n="gallery_title">Our Gallery</h2>
+      <div class="gallery__grid" id="galleryGrid"><!-- injected by JS --></div>
+    </section>
+
+    <!-- ============ VENUE ============ -->
+    <section class="section venue" id="venue">
+      <p class="eyebrow" data-i18n="venue_eyebrow">Where</p>
+      <h2 class="section__title" data-i18n="venue_title">The Venue</h2>
+      <div class="venue__wrap">
+        <div class="venue__info reveal">
+          <h3 class="venue__name">Sky Banquet</h3>
+          <p class="venue__addr" data-i18n="venue_addr">1st Floor, Niharika Mirage, Kopra Rd, Sector 10, Kharghar, Maharashtra 410210</p>
+          <div class="venue__actions">
+            <a class="btn btn--gold" id="directionsBtn" href="#" target="_blank" rel="noopener" data-i18n="venue_dir">Get Directions</a>
+          </div>
+        </div>
+        <div class="venue__map reveal">
+          <iframe
+            title="Venue map"
+            loading="lazy"
+            src="https://www.google.com/maps?q=Baner+Road+Pune&output=embed"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GIFT ============ -->
+    <section class="section gift" id="gift">
+      <p class="eyebrow" data-i18n="gift_eyebrow">With gratitude</p>
+      <h2 class="section__title" data-i18n="gift_title">Your Blessings</h2>
+      <div class="gift__card glass reveal">
+        <p class="gift__lead" data-i18n="gift_lead">Your presence is the greatest gift. However, if you wish to bless us further, here are the details.</p>
+        <div class="gift__grid">
+          <div class="gift__qr">
+            <div id="upiQr"></div>
+            <span data-i18n="gift_upi">Scan to pay via UPI</span>
+          </div>
+          <div class="gift__bank">
+            <h3 data-i18n="gift_bank">Bank Details</h3>
+            <dl>
+              <dt data-i18n="gift_acc_name">Account name</dt><dd>Shubham Panchal</dd>
+              <dt data-i18n="gift_acc_no">Account no.</dt><dd>1234 5678 9012</dd>
+              <dt data-i18n="gift_ifsc">IFSC</dt><dd>HDFC0000123</dd>
+              <dt data-i18n="gift_upi_id">UPI ID</dt><dd>shubham.janhavi@upi</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <p class="eyebrow" data-i18n="contact_eyebrow">Say hello</p>
+      <h2 class="section__title" data-i18n="contact_title">Contact Us</h2>
+      <div class="contact__grid">
+        <a class="contact__card glass" id="cPhone" href="tel:+919999999999">
+          <span class="contact__ic">📞</span>
+          <span class="contact__lbl" data-i18n="contact_phone">Call</span>
+          <span class="contact__val">+91 99999 99999</span>
+        </a>
+        <a class="contact__card glass" id="cIg" href="#" target="_blank" rel="noopener">
+          <span class="contact__ic">📸</span>
+          <span class="contact__lbl">Instagram</span>
+          <span class="contact__val">_shubham.panchal_</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__mono">S<span class="amp">&amp;</span>J</div>
+    <p class="footer__names">Shubham &amp; Janhavi</p>
+    <p class="footer__date" data-i18n="footer_date">28 December · Navi Mumbai</p>
+    <p class="footer__made" data-i18n="footer_made">Made with 💚 for our special day</p>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+    <img class="lightbox__img" id="lbImg" alt="" />
+    <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next">&#8250;</button>
+  </div>
+
+  <!-- ============ CONFETTI ============ -->
+  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+  <!-- ============ FLOATING BUTTONS ============ -->
+  <div class="fab-group">
+    <button class="fab fab--share" id="fabShare" aria-label="Share invitation">
+      <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+    </button>
+    <button class="fab fab--top" id="fabTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 19V6M6 12l6-6 6 6"/></svg>
+    </button>
+  </div>
+
+  <audio id="bgMusic" loop preload="none">
+    <!-- Royalty-free ambient track placeholder; drop your file in /assets/music -->
+    <source src="assets/music/theme.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="js/config.js"></script>
+  <script src="js/qrcode.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
