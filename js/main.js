@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    MAIN — wires up the whole invitation from window.WEDDING config.
    ========================================================================= */
 (function(){
@@ -11,6 +11,72 @@
   window.addEventListener("load", function(){
     setTimeout(function(){ $("#loader").classList.add("hide"); }, 650);
   });
+
+  /* ---------- Curtain intro ---------- */
+  var envelope = $("#envelope");
+  var seal = $("#envelopeSeal");
+  if(envelope && seal){
+    document.body.style.overflow = "hidden";
+
+    // Floating gold sparkle particles
+    var eCanvas = $("#envParticles");
+    var envAnimId;
+    if(eCanvas && !matchMedia("(prefers-reduced-motion:reduce)").matches){
+      var ectx = eCanvas.getContext("2d");
+      var sparks = [];
+      function resizeEnvCanvas(){eCanvas.width=innerWidth;eCanvas.height=innerHeight;}
+      resizeEnvCanvas();
+      window.addEventListener("resize",resizeEnvCanvas);
+      for(var i=0;i<50;i++) sparks.push({
+        x:Math.random()*innerWidth,
+        y:Math.random()*innerHeight,
+        r:0.8+Math.random()*2,
+        dx:-0.1+Math.random()*0.2,
+        dy:-0.2-Math.random()*0.4,
+        o:Math.random()*0.4+0.05,
+        phase:Math.random()*Math.PI*2
+      });
+      (function sparkLoop(){
+        ectx.clearRect(0,0,eCanvas.width,eCanvas.height);
+        var t=Date.now()*0.001;
+        sparks.forEach(function(s){
+          s.x+=s.dx+Math.sin(t*0.8+s.phase)*0.15;
+          s.y+=s.dy;
+          if(s.y<-10){s.y=eCanvas.height+10;s.x=Math.random()*eCanvas.width;}
+          if(s.x<-10)s.x=eCanvas.width+10;
+          if(s.x>eCanvas.width+10)s.x=-10;
+          var flicker = 0.5+0.5*Math.sin(t*1.5+s.phase);
+          ectx.globalAlpha = s.o*flicker;
+          ectx.fillStyle="#c6a15b";
+          ectx.beginPath();
+          ectx.arc(s.x,s.y,s.r,0,Math.PI*2);
+          ectx.fill();
+          // soft glow
+          ectx.globalAlpha = s.o*flicker*0.2;
+          ectx.beginPath();
+          ectx.arc(s.x,s.y,s.r*4,0,Math.PI*2);
+          ectx.fill();
+        });
+        ectx.globalAlpha=1;
+        envAnimId=requestAnimationFrame(sparkLoop);
+      })();
+    }
+
+    seal.addEventListener("click", function(e){
+      e.stopPropagation();
+      openEnvelope();
+    });
+
+    function openEnvelope(){
+      if(envelope.classList.contains("opening")) return;
+      envelope.classList.add("opening");
+      setTimeout(function(){
+        envelope.classList.add("hide");
+        document.body.style.overflow = "";
+        if(envAnimId) cancelAnimationFrame(envAnimId);
+      }, 2600);
+    }
+  }
 
   /* ---------- Inject config into DOM ---------- */
   function applyConfig(){
@@ -271,9 +337,11 @@
 
   /* ---------- QR codes (map + UPI) ---------- */
   function buildQRs(){
-    var mapC=document.createElement("canvas");
-    QRCode.toCanvas(mapC, W.mapsLink, {width:120,dark:"#1E3A2F"});
-    $("#mapQr").innerHTML="";$("#mapQr").appendChild(mapC);
+    if($("#mapQr")){
+      var mapC=document.createElement("canvas");
+      QRCode.toCanvas(mapC, W.mapsLink, {width:120,dark:"#1E3A2F"});
+      $("#mapQr").innerHTML="";$("#mapQr").appendChild(mapC);
+    }
     var upiC=document.createElement("canvas");
     var upiStr="upi://pay?pa="+W.upiId+"&pn="+encodeURIComponent(W.bankName)+"&cu=INR";
     QRCode.toCanvas(upiC, upiStr, {width:150,dark:"#1E3A2F"});
