@@ -254,6 +254,9 @@ h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600;line-height:1.12;c
 }
 .curtain__seal:hover{transform:scale(1.1)!important}
 
+.curtain__seal-ring,.curtain__seal-inner,.curtain__seal-inner::before,.curtain__seal-inner::after{
+  pointer-events:none;
+}
 .curtain__seal-ring{
   position:absolute;inset:-5px;border-radius:50%;
   background:radial-gradient(circle at 38% 32%,#8b2020,#6b1818 55%,#4a1010 100%);
