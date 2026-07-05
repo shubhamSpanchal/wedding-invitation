@@ -62,8 +62,20 @@
       })();
     }
 
-    seal.addEventListener("click", function(e){
+    // Use both touchend and click for reliable mobile support
+    function onSealTap(e){
+      e.preventDefault();
       e.stopPropagation();
+      openEnvelope();
+    }
+    seal.addEventListener("touchend", onSealTap, {passive:false});
+    seal.addEventListener("click", onSealTap);
+    // Also allow tapping anywhere on the curtain overlay
+    envelope.addEventListener("touchend", function(e){
+      e.preventDefault();
+      openEnvelope();
+    }, {passive:false});
+    envelope.addEventListener("click", function(){
       openEnvelope();
     });
 
