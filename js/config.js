@@ -1,4 +1,4 @@
-﻿/* =========================================================================
+/* =========================================================================
    WEDDING CONFIG — edit everything here. No need to touch HTML/CSS/JS.
    ========================================================================= */
 window.WEDDING = {
@@ -27,8 +27,8 @@ window.WEDDING = {
   bankIfsc:   "HDFC0000123",
 
   /* Photos — swap these URLs for your own. Placeholders resize via ?w= */
-  bridePhoto: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&q=70",
-  groomPhoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=70",
+  bridePhoto: "assets/images/bride.png",
+  groomPhoto: "assets/images/groom.png",
   heroImage:  "https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=70",
 
   /* Gallery images (Unsplash placeholders; masonry auto-sizes) */
@@ -70,19 +70,19 @@ window.I18N = {
     cd_done:"Today is the day — thank you for celebrating with us! 🎉",
     cd_cal:"Add to Google Calendar",
     story_eyebrow:"Our Story", story_title:"How it all began",
-    story_1_t:"How We Met", story_1_d:"Spring 2021",
+    story_1_t:"How We Met", story_1_d:"Winter 2025",
     story_1_p:"A spilled coffee, an apology, and a conversation that never really ended. A crowded café in Pune brought two strangers to the same small table.",
-    story_2_t:"First Date", story_2_d:"Summer 2021",
+    story_2_t:"First Date", story_2_d:"Winter 2025",
     story_2_p:"A long walk by the river turned into dinner, then dessert, then a promise to do it all again the very next evening.",
-    story_3_t:"The Proposal", story_3_d:"Winter 2024",
+    story_3_t:"The Proposal", story_3_d:"Winter 2025",
     story_3_p:"Under a sky full of stars and one very nervous question, she said yes before he could finish asking.",
-    story_4_t:"Wedding Day", story_4_d:"14 February 2026",
+    story_4_t:"Wedding Day", story_4_d:"28 December 2026",
     story_4_p:"And now, surrounded by everyone we love, we begin the rest of our lives together.",
     couple_eyebrow:"The Couple", couple_title:"Meet the pair",
     couple_groom_role:"The Groom",
-    couple_groom_bio:"An architect who loves old bookshops, filter coffee and long drives. Janhavi says he over-plans everything — including this wedding.",
+    couple_groom_bio:"A Software Engineer with a passion for technology, filter coffee, and long drives. Janhavi says he over plans everything including this wedding.",
     couple_bride_role:"The Bride",
-    couple_bride_bio:"A doctor who paints on weekends and hums while she works. Shubham says she can win any argument with a single raised eyebrow.",
+    couple_bride_bio:"An Architect who sketches dreams into reality, loves exploring beautiful spaces, and finds inspiration in every corner of the world. Shubham says she can win any argument with a single raised eyebrow.",
     events_eyebrow:"Celebrations", events_title:"Wedding Events",
     gallery_eyebrow:"Memories", gallery_title:"Our Gallery",
     venue_eyebrow:"Where", venue_title:"The Venue",
@@ -110,19 +110,19 @@ window.I18N = {
     cd_done:"आजचा तो खास दिवस — आमच्यासोबत आनंद साजरा केल्याबद्दल धन्यवाद! 🎉",
     cd_cal:"गूगल कॅलेंडरमध्ये जोडा",
     story_eyebrow:"आमची कथा", story_title:"सुरुवात अशी झाली",
-    story_1_t:"आमची भेट", story_1_d:"वसंत २०२१",
+    story_1_t:"आमची भेट", story_1_d:"हिवाळा २०२५",
     story_1_p:"सांडलेली कॉफी, एक माफी आणि कधीही न संपणारी गप्पा. पुण्यातील गजबजलेल्या कॅफेने दोन अनोळखी जीवांना एका टेबलावर आणले.",
-    story_2_t:"पहिली भेट", story_2_d:"उन्हाळा २०२१",
+    story_2_t:"पहिली भेट", story_2_d:"हिवाळा २०२५",
     story_2_p:"नदीकाठची लांब फेरी जेवणात, मग गोडाधोडात आणि पुन्हा दुसऱ्या संध्याकाळी भेटण्याच्या वचनात बदलली.",
-    story_3_t:"मागणी", story_3_d:"हिवाळा २०२४",
+    story_3_t:"मागणी", story_3_d:"हिवाळा २०२५",
     story_3_p:"तारे भरलेल्या आकाशाखाली एका घाबरलेल्या प्रश्नावर, त्याचे बोलणे संपण्याआधीच तिने होकार दिला.",
-    story_4_t:"विवाह दिन", story_4_d:"१४ फेब्रुवारी २०२६",
+    story_4_t:"विवाह दिन", story_4_d:"२८ डिसेंबर २०२६",
     story_4_p:"आणि आता, आपल्या प्रियजनांच्या साक्षीने, आम्ही आयुष्याची नवी सुरुवात करत आहोत.",
     couple_eyebrow:"वधू-वर", couple_title:"ओळख करून घ्या",
     couple_groom_role:"वर",
-    couple_groom_bio:"जुन्या पुस्तकांची दुकाने, फिल्टर कॉफी आणि लांब प्रवास आवडणारा वास्तुविशारद. इशा म्हणते तो सगळ्याचे — या लग्नाचेही — अति नियोजन करतो.",
+    couple_groom_bio:"तंत्रज्ञानाची आवड असलेला एक सॉफ्टवेअर इंजिनिअर. फिल्टर कॉफी आणि लांब ड्राइव्हचा तो मनापासून चाहता आहे. जान्हवीचं म्हणणं आहे की, तो प्रत्येक गोष्टीचं अतिशय बारकाईने नियोजन करतो अगदी या लग्नाचंही!",
     couple_bride_role:"वधू",
-    couple_bride_bio:"सुट्टीत चित्रे रंगवणारी आणि कामात गुणगुणणारी डॉक्टर. आरव म्हणतो ती एका भुवईने कोणताही वाद जिंकते.",
+    couple_bride_bio:"स्वप्नांना वास्तवात उतरवणारी एक आर्किटेक्ट. सुंदर वास्तू आणि जागा शोधायला तिला खूप आवडतं, आणि जगाच्या प्रत्येक कोपऱ्यात ती प्रेरणा शोधते. शुबहमचं म्हणणं आहे की, ती फक्त भुवई उंचावून कोणताही वाद जिंकू शकते!",
     events_eyebrow:"सोहळे", events_title:"विवाह कार्यक्रम",
     gallery_eyebrow:"आठवणी", gallery_title:"आमची गॅलरी",
     venue_eyebrow:"कुठे", venue_title:"स्थळ",
