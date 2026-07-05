@@ -18,7 +18,7 @@ window.WEDDING = {
   mapsQuery:  "Sky Banquet Niharika Mirage Kopra Rd Sector 10 Kharghar Maharashtra 410210", /* used for the embedded map + QR */
 
   phone:      "+919370285093",
-  instagram:  "_shubham.panchal_",
+  instagram:  "https://www.instagram.com/_shubham.panchal_",
 
   /* Gift */
   upiId:      "shubham.janhavi@upi",
